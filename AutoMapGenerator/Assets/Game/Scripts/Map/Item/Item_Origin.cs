@@ -20,8 +20,8 @@ namespace InGame.ForMap.ForItem
         [SerializeField] private EThemeType      _themeType = EThemeType.Unknown;
 
         [Space] [Header("Item Options")]
-        [SerializeField] private Item.ESizeType  _sizeType  = Item.ESizeType.Unknown;
-        [SerializeField] private Item.EColorType _colorType = Item.EColorType.Unknown;
+        [SerializeField] private ESizeType  _sizeType  = ESizeType.Unknown;
+        [SerializeField] private EColorType _colorType = EColorType.Unknown;
     }
 }
 #endif

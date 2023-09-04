@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 // ----- C#
 using System.Collections;
 using System.Collections.Generic;
@@ -15,12 +16,13 @@ namespace InGame.ForMap
         // --------------------------------------------------
         // Components
         // --------------------------------------------------
-        [Header("- 테마 유형")]
-        [SerializeField] private EThemeType _themeType = EThemeType.Unknown;
+        [Header("- 스캔 목록")]
+        [SerializeField] private List<Floor> _floorList = new List<Floor>();
 
         // --------------------------------------------------
-        // Variables
+        // Properties
         // --------------------------------------------------
-
+        public List<Floor> FloorList => _floorList;
     }
 }
+#endif

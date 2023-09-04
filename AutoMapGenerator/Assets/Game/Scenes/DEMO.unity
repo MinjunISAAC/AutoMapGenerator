@@ -1369,7 +1369,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30c262d6f0e537a418823bcc338935a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _itemParents: {fileID: 0}
+  _mapTitle: Map
+  _themeType: 1
+  _themeDataList:
+  - ThemeType: 1
+    BasicFloor: {fileID: 0}
+    ItemGroup:
+    - SizeType: 1
+      ColorType: 1
+      TargetItem: {fileID: 0}
+  _mapOrigin: {fileID: 0}
 --- !u!4 &983894438
 Transform:
   m_ObjectHideFlags: 0
@@ -1381,9 +1390,10 @@ Transform:
   m_LocalPosition: {x: 0.6747636, y: 0.72249776, z: 0.70826143}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1482289058}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &988804472
 PrefabInstance:
@@ -2192,8 +2202,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1482289058}
+  - component: {fileID: 1482289059}
   m_Layer: 0
-  m_Name: MapBase_0
+  m_Name: Map_Scan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2206,17 +2217,30 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482289057}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6747636, y: -0.72249776, z: -0.70826143}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2090323982}
   - {fileID: 661678573}
   - {fileID: 360217052}
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_Father: {fileID: 983894438}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1482289059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482289057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd09b1f1d840d9f41a320bdb3224dc40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _floorList: []
 --- !u!1001 &1585891554
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2701,9 +2725,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8615dc26190f3f148ad7e22d40938785, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _themeType: 0
-  _sizeType: 0
-  _colorType: 0
+  ThemeType: 0
+  SizeType: 0
+  ColorType: 0
 --- !u!1 &1973016812
 GameObject:
   m_ObjectHideFlags: 0
