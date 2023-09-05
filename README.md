@@ -1,6 +1,6 @@
 # AutoMapGenerator
 
-#### ⦁ [AutoMapGenerator]는 **[Stacking Color Match](https://play.google.com/store/apps/details?id=io.supercent.stackingcolormatch)**의 작업 내역 중, 맵 자동 생성 시스템을 재구성한 시스템입니다.
+#### ⦁ [AutoMapGenerator]는 **[Stacking Color Match](https://play.google.com/store/apps/details?id=io.supercent.stackingcolormatch)** 의 작업 내역 중, 맵 자동 생성 시스템을 재구성한 시스템입니다.
 
 #### ⦁ Version 1.0 (2023.09.05)
 
