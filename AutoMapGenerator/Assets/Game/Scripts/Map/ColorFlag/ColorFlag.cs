@@ -1,18 +1,26 @@
+// ----- C#
+using InGame.ForMap.ForItem;
 using System.Collections;
 using System.Collections.Generic;
+
+// ----- Unity
 using UnityEngine;
 
-public class ColorFlag : MonoBehaviour
+namespace InGame.ForMap.ForColorFlag
 {
-    // Start is called before the first frame update
-    void Start()
+    public class ColorFlag : MonoBehaviour
     {
-        
-    }
+        // --------------------------------------------------
+        // Components
+        // --------------------------------------------------
+        [Header("- 타입 설정")]
+        [SerializeField] private EColorType _colorType = EColorType.Unknown;
+        [SerializeField] private EFlagType  _flagType  = EFlagType.Unknown;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // --------------------------------------------------
+        // Properties
+        // --------------------------------------------------
+        public EColorType ColorType => _colorType;
+        public EFlagType  FlagType  => _flagType;
     }
 }

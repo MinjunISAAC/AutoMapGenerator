@@ -19,6 +19,12 @@ namespace InGame.ForMap.ForItem
         [Header("Item Options")]
         [SerializeField] private ESizeType  _sizeType  = ESizeType.Unknown;
         [SerializeField] private EColorType _colorType = EColorType.Unknown;
+
+        // --------------------------------------------------
+        // Properties
+        // --------------------------------------------------
+        public ESizeType  SizeType  => _sizeType;
+        public EColorType ColorType => _colorType;
     }
 }
 #endif
