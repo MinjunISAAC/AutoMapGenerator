@@ -15,9 +15,9 @@ namespace InGame.ForMap
     [System.Serializable]
     public class ThemeInfo 
     {
-        public EThemeType     ThemeType  = EThemeType.Unknown;
-        public Floor          BasicFloor = null;
-        public List<ItemInfo> ItemGroup  = new List<ItemInfo>(); 
+        public EThemeType      ThemeType  = EThemeType.Unknown;
+        public List<ItemInfo>  ItemGroup  = new List<ItemInfo>(); 
+        public List<FloorInfo> FloorGroup = new List<FloorInfo>();
     }
 
     [System.Serializable]
@@ -38,7 +38,7 @@ namespace InGame.ForMap
         
         [Header("- 테마 관련 정보")]
         [SerializeField] private EThemeType      _themeType     = EThemeType.Unknown;
-        [SerializeField] private List<ThemeInfo> _themeDataList = new List<ThemeInfo>();
+        [SerializeField] private List<ThemeInfo> _themeInfoList = new List<ThemeInfo>();
 
         [Header("- 스캔 구조")]
         [SerializeField] private MapOrigin  _mapOrigin = null;
