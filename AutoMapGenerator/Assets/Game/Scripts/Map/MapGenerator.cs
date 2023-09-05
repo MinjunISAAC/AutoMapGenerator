@@ -34,14 +34,14 @@ namespace InGame.ForMap
         // Components
         // --------------------------------------------------
         [Header("- 맵 옵션")]
-        [SerializeField] private string     _mapTitle  = null;
+        [SerializeField] private string          _mapTitle      = null;
         
         [Header("- 테마 관련 정보")]
         [SerializeField] private EThemeType      _themeType     = EThemeType.Unknown;
         [SerializeField] private List<ThemeInfo> _themeInfoList = new List<ThemeInfo>();
 
         [Header("- 스캔 구조")]
-        [SerializeField] private MapOrigin  _mapOrigin = null;
+        [SerializeField] private ScanMap         _scanMap       = null;
 
         // --------------------------------------------------
         // Variables
@@ -108,7 +108,7 @@ namespace InGame.ForMap
 
         private void _ScanFloor()
         {
-            var floorList = _mapOrigin.FloorList;
+            var floorList = _scanMap.FloorList;
 
             for (int i = 0; i < floorList.Count; i++)
             {

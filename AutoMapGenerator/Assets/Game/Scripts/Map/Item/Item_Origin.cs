@@ -16,10 +16,7 @@ namespace InGame.ForMap.ForItem
         // --------------------------------------------------
         // Components
         // --------------------------------------------------
-        [Header("Theme Select")]
-        [SerializeField] private EThemeType      _themeType = EThemeType.Unknown;
-
-        [Space] [Header("Item Options")]
+        [Header("Item Options")]
         [SerializeField] private ESizeType  _sizeType  = ESizeType.Unknown;
         [SerializeField] private EColorType _colorType = EColorType.Unknown;
     }
