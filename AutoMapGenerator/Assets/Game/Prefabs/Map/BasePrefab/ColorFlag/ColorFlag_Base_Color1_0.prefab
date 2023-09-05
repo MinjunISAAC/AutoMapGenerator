@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2428751563319650405}
   - component: {fileID: 2428751563319650406}
   m_Layer: 0
-  m_Name: ColorFlag_Base_Red_0
+  m_Name: ColorFlag_Base_Color1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,6 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b54f3cb450b90944ea00a9e47cda0309, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _colorType: 2
+  _flagType: 1
 --- !u!33 &2428751563319650404
 MeshFilter:
   m_ObjectHideFlags: 0

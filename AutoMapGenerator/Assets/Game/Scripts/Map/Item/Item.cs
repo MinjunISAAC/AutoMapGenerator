@@ -9,8 +9,7 @@ namespace InGame.ForMap.ForItem
     [System.Serializable]
     public class Item : MonoBehaviour
     {
-        public ESizeType  ThemeType = ESizeType.Unknown;
+        public ESizeType  SizeType  = ESizeType.Unknown;
         public EColorType ColorType = EColorType.Unknown;
-        public ItemInfo   Info      = null;
     }
 }

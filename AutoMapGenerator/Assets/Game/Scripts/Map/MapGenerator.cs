@@ -17,7 +17,8 @@ namespace InGame.ForMap
     {
         public EThemeType      ThemeType  = EThemeType.Unknown;
         public List<ItemInfo>  ItemGroup  = new List<ItemInfo>(); 
-        public List<FloorInfo> FloorGroup = new List<FloorInfo>();
+        public Floor           BasicFloor = null;
+        public Floor           EndFloor   = null;
     }
 
     [System.Serializable]
@@ -71,7 +72,8 @@ namespace InGame.ForMap
             // Map 구조 생성
             _CreatedStructure();
 
-            // Map
+            // Floor 구조 생성
+            _ScanFloor();
         }
 
         // ----- Private
@@ -108,13 +110,38 @@ namespace InGame.ForMap
 
         private void _ScanFloor()
         {
-            var floorList = _scanMap.FloorList;
+            var   scanFloorList   = _scanMap.FloorList;
+            var   scanEndFloor    = _scanMap.EndFloor;
+            Floor basicFloorModel = null;
+            Floor endFloorModel   = null;
 
-            for (int i = 0; i < floorList.Count; i++)
+            for (int i = 0; i < _themeInfoList.Count; i++)
             {
-                var floor = floorList[i];
-
+                var themeInfo = _themeInfoList[i];
+                if (themeInfo.ThemeType == _themeType)
+                {
+                    basicFloorModel = themeInfo.BasicFloor;
+                    endFloorModel   = themeInfo.EndFloor;
+                    break;
+                }
             }
+
+            if (basicFloorModel == null || endFloorModel == null)
+            {
+                Debug.LogError($"[MapGenerator._ScanFloor] 해당 테마의 바닥 오브젝트가 존재하지 않습니다.");
+                return;
+            }
+
+            for (int i = 0; i < scanFloorList.Count; i++)
+            {
+                var scanFloor  = scanFloorList[i];
+                var basicFloor = Instantiate(basicFloorModel, _floorParents);
+
+                basicFloor.transform.position = scanFloor.transform.position;
+            }
+
+            var endFloor = Instantiate(endFloorModel, _endFloorParents);
+            endFloor.transform.position = scanEndFloor.transform.position;
         }
 
         private void _SearchItem()
